@@ -1,0 +1,61 @@
+
+:root{
+  --color-light:#fff;
+
+  --color-dark:#2E2E2E;
+  --color-dark-500:#414141;
+  --color-dark-400:#777777;
+
+
+  --color-primary-300:#FFCC21;
+  --color-primary-400:#FF963C;
+  --color-primary-500:#EA6C00;
+
+  --color-secondary-300:#8FE9D0;
+
+  --color-linear:linear-gradient(180deg, #FFCC21 0%, #FF963C 100%);
+
+}
+
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: var(--color-dark);
+}
+
