@@ -1,15 +1,20 @@
 import React from "react";
-import { styled } from "styled-components";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Header from "./components/Header";
+
 
 function App() {
-  return <Container className="container-app">Hello word</Container>;
+  return (
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
-
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`
