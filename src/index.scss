@@ -1,33 +1,30 @@
+:root {
+  --light: #fff;
 
-:root{
-  --color-light:#fff;
+  --dark: #2e2e2e;
+  --dark-500: #414141;
+  --dark-400: #777777;
+  --dark-300: #707070;
 
-  --color-dark:#2E2E2E;
-  --color-dark-500:#414141;
-  --color-dark-400:#777777;
+  --primary-300: #ffcc21;
+  --primary-400: #ff963c;
+  --primary-500: #ea6c00;
 
+  --secondary-300: #8fe9d0;
 
-  --color-primary-300:#FFCC21;
-  --color-primary-400:#FF963C;
-  --color-primary-500:#EA6C00;
-
-  --color-secondary-300:#8FE9D0;
-
-  --color-linear:linear-gradient(180deg, #FFCC21 0%, #FF963C 100%);
-
+  --linear: linear-gradient(180deg, #ffcc21 0%, #ff963c 100%);
 }
-
 
 @font-face {
   font-family: "Noto Sans JP";
   src: url("./fonts/NotoSansJP-Light.ttf") format("truetype");
   font-weight: 300;
+  font-style: normal;
 }
 @font-face {
   font-family: "Noto Sans JP";
   src: url("./fonts/NotoSansJP-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-style: normal;
 }
 @font-face {
   font-family: "Noto Sans JP";
@@ -53,9 +50,33 @@
 
 * {
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   color: var(--color-dark);
+  transition: all 0.2s;
 }
 
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .container-content {
+      width: 100%;
+      max-width: 1008px;
+      padding: 0 24px;
+    }
+  }
+
+  .app-content{
+    flex-grow:1
+  }
+}

@@ -1,0 +1,29 @@
+.wrapper-footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-500);
+  color: var(--light);
+  font-size: 11px;
+  line-height: 16px;
+  padding: 32px 0px;
+  letter-spacing: 0.03px;
+
+  .list-link-footer {
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+
+    .link-footer {
+      text-decoration: none;
+      padding: 12px 0px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 24px 0px;
+    .list-link-footer {
+      flex-direction: column;
+      grid-gap: 8px;
+    }
+  }
+}
