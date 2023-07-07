@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import Logo from "images/logo.png";
 import { Link } from "react-router-dom";
@@ -26,10 +26,40 @@ export default function Header() {
       link: "/info",
       icon: iconInfo,
     },
+    {
+      title: "自分の記録",
+      link: "/profile",
+    },
+    {
+      title: "体重グラフ",
+      link: "/chart",
+    },
+    {
+      title: "目標",
+      link: "/target",
+    },
+    {
+      title: "選択中のコース",
+      link: "/learning",
+    },
+    {
+      title: "コラム一覧",
+      link: "/list",
+    },
+    {
+      title: "設定",
+      link: "/setting",
+    },
   ];
 
   const linkActive = useActiveLink();
   const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false);
+  const [showMoreMenu, setShowMoreMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    setOpenMenuMobile(false);
+    setShowMoreMenu(false);
+  }, [linkActive]);
 
   return (
     <div className="container wrapper-header">
@@ -46,22 +76,65 @@ export default function Header() {
             <Link to={"/"} className={`logo-on-menu-mobile`}>
               <img src={Logo} alt="logo" className="icon-logo" />
             </Link>
-            {dataNavigation.map((item) => {
+            {dataNavigation.map((item, index) => {
+              if (index <= 2) {
+                return (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className={`link-navigation ${
+                      linkActive === item.link && "link-navigation-active"
+                    }`}
+                  >
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="icon-link"
+                    />
+                    {item.title}
+                  </Link>
+                );
+              }
               return (
                 <Link
-                  key={item.link}
+                  key={index}
                   to={item.link}
                   className={`link-navigation ${
                     linkActive === item.link && "link-navigation-active"
-                  }`}
+                  } link-navigation-more`}
                 >
-                  <img src={item.icon} alt={item.title} className="icon-link" />
                   {item.title}
                 </Link>
               );
             })}
             <div className="icon-menu-navigation">
-              <img src={iconMenu} alt="icon-menu" />
+              <img
+                src={showMoreMenu ? iconClose : iconMenu}
+                alt="icon-menu"
+                onClick={() => setShowMoreMenu(!showMoreMenu)}
+              />
+              <div
+                className={`list-navigation-more ${
+                  showMoreMenu && "list-navigation-more-show"
+                }`}
+              >
+                {dataNavigation.map((item, index) => {
+                  if (index > 2) {
+                    return (
+                      <Link
+                        key={item.link}
+                        to={item.link}
+                        className={`link-navigation ${
+                          linkActive === item.link && "link-navigation-active"
+                        } link-more`}
+                      >
+                        {item.title}
+                      </Link>
+                    );
+                  }
+                  return null;
+                })}
+              </div>
             </div>
             <div
               className="wrapper-icon-close"
