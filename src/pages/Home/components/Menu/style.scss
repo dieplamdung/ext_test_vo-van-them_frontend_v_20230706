@@ -1,0 +1,16 @@
+.wrapper-list-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 24px !important;
+
+  .wrapper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 12px;
+  }
+}
