@@ -1,0 +1,44 @@
+.wrapper-item-food {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .item-food-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+
+    .image-food {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .label-food-value {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      padding: 7px 10px;
+      color: var(--light);
+      background-color: var(--primary-300);
+      z-index: 2;
+
+      .label {
+        font-family: "Inter";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+}
