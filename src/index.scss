@@ -77,6 +77,11 @@
   }
 
   .app-content{
-    flex-grow:1
+    flex-grow:1;
+
+    .wrapper-page{
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

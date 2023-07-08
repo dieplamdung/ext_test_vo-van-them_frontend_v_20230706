@@ -16,6 +16,9 @@
     .link-footer {
       text-decoration: none;
       padding: 12px 0px;
+      &:hover{
+        color: var(--primary-400);
+      }
     }
   }
 
