@@ -1,0 +1,30 @@
+.wrapper-list-item-food {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  position: relative;
+
+  .list-item-food {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    height: fit-content;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+}
+
+.wrapper-list-item-food-hidden {
+  display: none;
+}
+
+.wrapper-button-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 28px 0px 64px 0px;
+}

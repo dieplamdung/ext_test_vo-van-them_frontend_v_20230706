@@ -4,6 +4,7 @@ import Home from "pages/Home";
 import Profile from "pages/Profile";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import IconScroll from "components/IconScroll";
 
 function App() {
   return (
@@ -16,6 +17,11 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      <div className="container">
+        <div className="container-content icon-scroll">
+          <IconScroll />
+        </div>
+      </div>
     </div>
   );
 }
