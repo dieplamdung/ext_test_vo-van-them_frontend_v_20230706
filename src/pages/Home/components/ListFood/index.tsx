@@ -31,51 +31,44 @@ export default function ListFood(props: PropsListFood) {
     setListFood(newListFood);
   };
 
-
-
   return (
     <div className="container">
       <div className="container-content">
-        <div
-          className={`wrapper-list-item-food ${
-            menuSelect && "wrapper-list-item-food-hidden"
-          }`}
-        >
-          {listFood.map((food, index) => {
-            return (
-              <div className="list-item-food" key={index}>
-                {food.data.map((item, idx) => {
-                  return <ItemFood {...item} key={idx} />;
-                })}
-              </div>
-            );
-          })}
-        </div>
-
-        <div
-          className={`wrapper-list-item-food ${
-            !menuSelect && "wrapper-list-item-food-hidden"
-          }`}
-        >
-          {listFood.map((food, index) => {
-            if (food.id === menuSelect) {
+        {!menuSelect ? (
+          <div className={`wrapper-list-item-food`}>
+            {listFood.map((food, index) => {
               return (
-                <React.Fragment key={index}>
+                <div className="list-item-food" key={index}>
                   {food.data.map((item, idx) => {
                     return <ItemFood {...item} key={idx} />;
                   })}
-                </React.Fragment>
+                </div>
               );
-            }
-            return null;
-          })}
-        </div>
+            })}
+          </div>
+        ) : (
+          <div className={`wrapper-list-item-food `}>
+            {listFood.map((food, index) => {
+              if (food.id === menuSelect) {
+                return (
+                  <React.Fragment key={index}>
+                    {food.data.map((item, idx) => {
+                      return <ItemFood {...item} key={idx} />;
+                    })}
+                  </React.Fragment>
+                );
+              }
+              return null;
+            })}
+          </div>
+        )}
 
-          {!menuSelect && <ButtonViewMore
+        {!menuSelect && (
+          <ButtonViewMore
             title="記録をもっと見る"
             onClick={handleClickViewMore}
-          />}
-
+          />
+        )}
       </div>
     </div>
   );
