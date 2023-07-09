@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./style.scss";
 import Logo from "images/logo.png";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import iconProfile from "images/icons/profile.svg";
 import iconMenu from "images/icons/menu.svg";
 import iconClose from "images/icons/icon_close.svg";
 import { useActiveLink } from "hooks/useActiveLink";
+import { useScrollDown } from "hooks/useScrollDown";
 
 export default function Header() {
   const dataNavigation = [
@@ -53,6 +54,7 @@ export default function Header() {
   ];
 
   const linkActive = useActiveLink();
+  const scrollDown = useScrollDown();
   const [openMenuMobile, setOpenMenuMobile] = useState<boolean>(false);
   const [showMoreMenu, setShowMoreMenu] = useState<boolean>(false);
 
@@ -61,8 +63,19 @@ export default function Header() {
     setShowMoreMenu(false);
   }, [linkActive]);
 
-  return (
-    <div className="container wrapper-header">
+  useEffect(() => {
+    const body = document.getElementsByTagName("body")?.[0];
+    if (body) {
+      if (openMenuMobile) {
+        body.classList.add("disable-scroll");
+      } else {
+        body.classList.remove("disable-scroll");
+      }
+    }
+  }, [openMenuMobile]);
+
+  const contentHeader = () => {
+    return (
       <div className="container-content content-header">
         <Link to={"/"}>
           <img src={Logo} alt="logo" className="icon-logo" />
@@ -151,6 +164,26 @@ export default function Header() {
           <img src={iconMenu} alt="icon-menu" />
         </div>
       </div>
-    </div>
+    );
+  };
+
+  return (
+    <>
+      <div
+        className={`container wrapper-header ${
+          scrollDown && "hidden-menu-main"
+        }`}
+      >
+        {contentHeader()}
+      </div>
+
+      <div
+        className={`container wrapper-header ${
+          scrollDown ? "sticky-header" : "sticky-header-hidden"
+        }`}
+      >
+        {contentHeader()}
+      </div>
+    </>
   );
 }
