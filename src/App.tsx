@@ -5,6 +5,7 @@ import Profile from "pages/Profile";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import IconScroll from "components/IconScroll";
+import Challenge from "pages/Challenge";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="app-content">
         <Routes>
           <Route path="/profile" element={<Profile />} />
+          <Route path="/challenge" element={<Challenge />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

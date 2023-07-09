@@ -17,6 +17,15 @@ import imgBlock1 from "images/MyRecommend-1.jpg";
 import imgBlock2 from "images/MyRecommend-2.jpg";
 import imgBlock3 from "images/MyRecommend-3.jpg";
 
+import imgItemChallenge1 from "images/column-1.jpg";
+import imgItemChallenge2 from "images/column-2.jpg";
+import imgItemChallenge3 from "images/column-3.jpg";
+import imgItemChallenge4 from "images/column-4.jpg";
+import imgItemChallenge5 from "images/column-5.jpg";
+import imgItemChallenge6 from "images/column-6.jpg";
+import imgItemChallenge7 from "images/column-7.jpg";
+import imgItemChallenge8 from "images/column-8.jpg";
+
 export const COLOR_CHART = {
   primary: "hsl(46, 100%, 56%)",
   secondary: "hsl(163, 67%, 74%)",
@@ -1313,6 +1322,212 @@ export const DATA_MY_DIARY = [
         title: "私の日記の記録が一部表示されます。",
         description:
           "テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+      },
+    ],
+  },
+];
+
+export const DATA_BANNER_CHALLENGE = [
+  {
+    id: "1",
+    title: "RECOMMENDED COLUMN",
+    description: "オススメ",
+  },
+  {
+    id: "2",
+    title: "RECOMMENDED DIET",
+    description: "ダイエット",
+  },
+  {
+    id: "3",
+    title: "RECOMMENDED COLUMN",
+    description: "美容",
+  },
+  {
+    id: "4",
+    title: "RECOMMENDED COLUMN",
+    description: "健康",
+  },
+];
+
+export const DATA_LIST_CHALLENGE = [
+  {
+    id: "1",
+    data: [
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge1,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge2,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge3,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge4,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge5,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+    ],
+  },
+  {
+    id: "2",
+    data: [
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge6,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge7,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge8,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge1,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge2,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+    ],
+  },
+  {
+    id: "3",
+    data: [
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge1,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge2,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge3,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge4,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge5,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+    ],
+  },
+  {
+    id: "4",
+    data: [
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge6,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge7,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge8,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge1,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
+      },
+      {
+        date: "2023.07.09",
+        time: "17.22",
+        description:
+          "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ",
+        imageBg: imgItemChallenge2,
+        hashtag: ["#魚料理", "#和食", "#DHA"],
       },
     ],
   },
