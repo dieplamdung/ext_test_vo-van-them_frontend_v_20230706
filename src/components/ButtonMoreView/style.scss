@@ -1,15 +1,23 @@
-.button-view-more {
-  width: 296px;
-  height: 56px;
-  background: var(--linear-secondary);
-  color: var(--light);
-  font-size: 18px;
-  line-height: 26px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.wrapper-button-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 28px 0px 64px 0px;
 
-  @media (max-width: 700px) {
-    width: 100%;
+  .button-view-more {
+    width: 296px;
+    height: 56px;
+    background: var(--linear-secondary);
+    color: var(--light);
+    font-size: 18px;
+    line-height: 26px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  
+    @media (max-width: 700px) {
+      width: 100%;
+    }
   }
 }
+

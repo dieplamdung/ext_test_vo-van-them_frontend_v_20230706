@@ -71,12 +71,10 @@ export default function ListFood(props: PropsListFood) {
           })}
         </div>
 
-        <div className="wrapper-button-bottom">
           {!menuSelect && <ButtonViewMore
             title="記録をもっと見る"
             onClick={handleClickViewMore}
           />}
-        </div>
 
       </div>
     </div>

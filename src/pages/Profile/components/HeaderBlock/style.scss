@@ -1,0 +1,35 @@
+.wrapper-header-block {
+  display: flex;
+  align-items: center;
+  padding: 0px 24px;
+  color: var(--light);
+  
+  .title {
+    max-width: 96px;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+  }
+  .title-date {
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.11px;
+  }
+
+  @media (max-width: 700px) {
+    .title {
+      max-width: none;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .title-date {
+      font-size: 16px;
+      line-height: 18x;
+      margin-left: 12px;
+    }
+  }
+}

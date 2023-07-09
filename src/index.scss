@@ -69,12 +69,42 @@
     pointer-events: none;
   }
 
+  .limit-text-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .limit-text-2 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .limit-text-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: var(--dark-400);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary-300);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
   }
 }
 

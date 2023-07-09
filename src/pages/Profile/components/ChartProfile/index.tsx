@@ -6,39 +6,29 @@ import {
   DATA_FILTER_TIME,
   DATA_CHART_PROFILE,
 } from "utils/constant";
+import HeaderBlock from "../HeaderBlock";
 
-export default function ChartProfile() {
-  const [filter, setFilter] = useState<string>("day");
-  const [date, setDate] = useState<string>("2023.07.09");
+type PropsChartProfile = {
+  date: string;
+  filter: string;
+  onChangeFilter: (value: string) => void;
+  dataChart: {
+    id: string;
+    color: string;
+    data: {
+      x: string;
+      y: number;
+    }[];
+  }[];
+};
 
-  const [dataChart, setDataChart] = useState<
-    {
-      id: string;
-      color: string;
-      data: {
-        x: string;
-        y: number;
-      }[];
-    }[]
-  >(DATA_CHART);
-
-  const handleFilter = (id: string) => {
-    if (id === filter) return;
-    setFilter(id);
-    const newDataChart = DATA_CHART_PROFILE.find((item) => item.id === id);
-    if (newDataChart) {
-      setDate(newDataChart.date);
-      setDataChart(newDataChart?.data);
-    }
-  };
+export default function ChartProfile(props: PropsChartProfile) {
+  const { date, dataChart, onChangeFilter, filter } = props;
 
   return (
     <div className="wrapper-chart-profile">
       <div className="content-chart-profile">
-        <div className="title-chart-profile">
-          <p className="title">BODY RECORD</p>
-          <p className="title-date">{date}</p>
-        </div>
+        <HeaderBlock title="BODY RECORD" value={date} />
         <div className="chart-profile">
           <Chart data={dataChart} />
         </div>
@@ -50,7 +40,7 @@ export default function ChartProfile() {
                   filter === item.id && "item-filter-active"
                 }`}
                 key={item.id}
-                onClick={() => handleFilter(item.id)}
+                onClick={() => onChangeFilter(item.id)}
               >
                 {item.title}
               </div>
