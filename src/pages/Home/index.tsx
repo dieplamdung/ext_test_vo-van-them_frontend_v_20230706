@@ -6,7 +6,7 @@ import ListFood from "./components/ListFood";
 
 export default function Home() {
   const [menuSelect, setMenuSelect] = useState<string>("");
-
+console.log("menuSelect",menuSelect)
   const handleSelectMenu = (id: string) => {
     if (id === menuSelect) {
       setMenuSelect("");
