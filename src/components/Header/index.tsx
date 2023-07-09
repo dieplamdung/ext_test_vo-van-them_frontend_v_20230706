@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import Logo from "images/logo.png";
 import { Link } from "react-router-dom";
