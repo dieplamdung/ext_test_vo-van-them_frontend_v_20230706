@@ -13,6 +13,10 @@ import imgFoodDinner2 from "images/d02.jpg";
 
 import imgFoodSnack from "images/s01.jpg";
 
+import imgBlock1 from "images/MyRecommend-1.jpg";
+import imgBlock2 from "images/MyRecommend-2.jpg";
+import imgBlock3 from "images/MyRecommend-3.jpg";
+
 export const COLOR_CHART = {
   primary: "hsl(46, 100%, 56%)",
   secondary: "hsl(163, 67%, 74%)",
@@ -102,4 +106,22 @@ export const LIST_FOOD = [
   { id: ID_MENU.lunch, data: LIST_FOOD_LUNCH },
   { id: ID_MENU.dinner, data: LIST_FOOD_DINNER },
   { id: ID_MENU.snack, data: LIST_FOOD_SNACK },
+];
+
+export const CONTENT_BLOCK_PROFILE = [
+  {
+    title: "BODY RECORD",
+    description: "自分のカラダの記録",
+    image: imgBlock1,
+  },
+  {
+    title: "MY EXERCISE",
+    description: "自分の運動の記録",
+    image: imgBlock2,
+  },
+  {
+    title: "MY DIARY",
+    description: "自分の日記",
+    image: imgBlock3,
+  },
 ];

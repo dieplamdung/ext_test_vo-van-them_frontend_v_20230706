@@ -57,6 +57,25 @@
   box-sizing: border-box;
   color: var(--color-dark);
   transition: all 0.2s;
+
+  .disable-scroll {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh !important;
+    overflow: hidden !important;
+    pointer-events: none;
+  }
+
+  .limit-text-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .app {
@@ -74,6 +93,7 @@
       width: 100%;
       max-width: 1008px;
       padding: 0 24px;
+      pointer-events: auto;
     }
 
     .icon-scroll {
