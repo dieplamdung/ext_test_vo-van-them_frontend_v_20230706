@@ -2,11 +2,9 @@ import iconKnife from "images/icons/icon_knife.svg";
 import iconCup from "images/icons/icon_cup.svg";
 import imgFoodMorning1 from "images/m01.jpg";
 import imgFoodMorning2 from "images/m02.jpg";
-import imgFoodMorning3 from "images/m03.jpg";
 
 import imgFoodLunch1 from "images/l01.jpg";
 import imgFoodLunch2 from "images/l02.jpg";
-import imgFoodLunch3 from "images/l03.jpg";
 
 import imgFoodDinner1 from "images/d01.jpg";
 import imgFoodDinner2 from "images/d02.jpg";
